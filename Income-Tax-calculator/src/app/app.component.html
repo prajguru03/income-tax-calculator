@@ -1,0 +1,47 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="w-full max-w-md bg-blue-200 shadow-lg rounded-2xl p-6">
+    
+    <!-- Animated Title -->
+    <h2 class="text-2xl font-extrabold text-center text-blue-700 mb-6 ">
+      Income Tax Calculator
+    </h2>
+
+    <!-- Income Input -->
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-700 mb-1">Income:</label>
+      <input type="number" [(ngModel)]="income"  min="1" required class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+    </div>
+
+    <!-- Deductions -->
+    <h3 class="text-lg font-semibold text-gray-800 mb-2">Deductions (Old Tax Regime):</h3>
+
+    <div class="mb-3">
+      <label class="block text-sm text-gray-700 mb-1">80C:</label>
+      <input type="number" [(ngModel)]="deductions['80C']" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+    </div>
+
+    <div class="mb-3">
+      <label class="block text-sm text-gray-700 mb-1">80D:</label>
+      <input type="number" [(ngModel)]="deductions['80D']" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-sm text-gray-700 mb-1">80E:</label>
+      <input type="number" [(ngModel)]="deductions['80E']" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button (click)="calculateTax()"
+        class="bg-gradient-to-r from-blue-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300">
+        Calculate Tax
+      </button>
+    </div>
+
+    <!-- Result Display -->
+    <div *ngIf="result" class="mt-6 bg-white p-4 rounded-lg shadow-inner">
+      <p><strong>Net Income:</strong> ₹{{ result.netIncome }}</p>
+      <p><strong>Total Tax:</strong> ₹{{ result.tax }}</p>
+    </div>
+  </div>
+</div>

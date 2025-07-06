@@ -1,0 +1,8 @@
+# Node
+node_modules/
+.env
+
+# Angular
+Income-Tax-calculator/node_modules/
+Income-Tax-calculator/.angular/
+dist/
