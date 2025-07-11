@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "npm install -g @angular/cli && ng build --configuration production",
+    "vercel-build": "npm install -g @angular/cli && npm run build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:Income-Tax-calculator": "node dist/income-tax-calculator/server/server.mjs"
