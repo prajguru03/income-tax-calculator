@@ -20,9 +20,9 @@
             "outputPath": "dist/income-tax-calculator",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
+              "baseHref": "/income-tax-calculator/",
+            
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
